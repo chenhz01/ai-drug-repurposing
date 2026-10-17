@@ -1,3 +1,9 @@
+## English Summary
+
+These notes examine one question: can computational methods reliably assign new indications to molecules that have already paid for their safety, pharmacokinetics, and manufacturing. The ten pieces move through cost accounting by remaining uncertainty, a four-layer evidence chain linking molecule, selectivity, phenotype, and clinic, transcriptome fingerprint matching, diffusion models for drug-target interaction under cold start, entropy-based selectivity scoring, phenotype validation at cell-line scale, signals from million-person electronic health records, the unit economics of screening versus validation, and a closing falsification boundary. Each claim carries a boundary number together with its definition, a source grade, and the observation that would overturn it. They are written for engineers and researchers evaluating this field, and for anyone who needs to keep retrospective benchmark scores separate from prospective replication rates.
+
+> 中文简介见下 ↓
+
 # AI 老药新用与计算重定位 · 十件研究笔记
 
 一句话定位：这是一组长期跟踪「用计算手段给已上市分子寻找新适应症」这一技术方向写下的研究笔记——记录它的方法论骨架、关键数字与证伪条件，不承诺它一定成立。
@@ -53,3 +59,33 @@
 ## 许可
 
 MIT License。作者署名：chenhz01。
+
+## 同系列笔记（五个领域）
+
+| 领域 | 仓库 | 一句话 |
+|---|---|---|
+| 神经形态计算与事件驱动传感 | [neuromorphic-event-sensing](https://github.com/chenhz01/neuromorphic-event-sensing) | 永远在线的智能为什么必须抛弃「帧」与全局时钟，以及省 100 倍的前提条件 |
+| AI 老药新用与计算重定位 | [ai-drug-repurposing](https://github.com/chenhz01/ai-drug-repurposing) | 用计算手段给已上市分子找新适应症，以及 10-30% 的前瞻重复率边界 |
+| 本地优先软件与 CRDT 同步 | [local-first-crdt](https://github.com/chenhz01/local-first-crdt) | 把数据主副本放回用户设备，冲突由数学保证收敛 |
+| 后量子密码迁移 | [post-quantum-migration](https://github.com/chenhz01/post-quantum-migration) | 从 Shor 的威胁模型走到一人公司能执行的换算法顺序 |
+| 软体与折纸机器人 | [soft-origami-robotics](https://github.com/chenhz01/soft-origami-robotics) | 柔性结构能否把安全、顺应与几何编程做成工程能力 |
+
+五套笔记各自独立，互不依赖，可任选入口进入。
+
+## 费曼速览：60 秒判断这个领域值不值得你花时间
+
+**一句话**：像在已经通关的老游戏里翻隐藏关卡——这个药已经证明过对人体安全，现在只是试试它还能治别的病；哪里不像：游戏里的隐藏关卡是设计好的，而一个药对这种病有效，不代表对下一种也有效——只有 10-30% 的计算预测能在体外重复。
+
+**三个数**：
+
+1. 仅 10-30% 的顶级计算预测能在体外重复 [二手]
+2. LinkD-Select 恢复 95.3% 的已知选择性药物-靶点对（回顾性指标，非前瞻命中率）[二手]
+3. 商业平台订阅费约 $50K-$500K/年，而每个适应症含验证约 $1M-$5M [二手]
+
+**不成立的三个条件**：
+
+1. 若前瞻重复率在特定任务定义下系统性高于 30%，本套笔记的 10-30% 区间需上修，「把计算当筛子」的期望值结论随之改变。
+2. 若回顾性指标（95.3%、Top50 约 85%）被证明与前瞻命中率之间不存在系统性落差，则「回顾指标不能外推」这一核心警告失效。
+3. 若 composition-of-matter 专利封锁、适应症红海或新人群毒性档案让省下的成本归零，则「成本优势 → 商业成功」的推论不成立。
+
+这套笔记的每篇都有完整两层费曼拆解，方法见 [FEYNMAN.md](./FEYNMAN.md)。
