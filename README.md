@@ -1,8 +1,30 @@
-## English Summary
+## 15 秒判断：这套笔记值不值得你收藏
+
+**收藏它，如果你是 ——**
+- 在药企或 CRO 里要拍板「要不要上一套 AI 重定位平台、预算批到哪一档」的技术决策者，需要先看清固定成本与变动成本之间隔着的倍数
+- 做 DTI 预测、转录组匹配或表型筛选的工程师，需要向非专业主管解释「回顾性恢复 95.3% 为什么不能写成命中率」
+- 要为这个赛道写尽调材料、综述或立项报告的研究者，需要一批自带定义、来源等级与证伪条件的现成对照数字
+
+**直接划走，如果你要的是 ——**
+- 能直接跑的筛选代码：本仓是纯研究笔记，只有方法描述、数据源名称与验证协议，没有实现，也没有数据集下载脚本
+- 用药、诊疗或停药建议：文中所有药物名、适应症、风险比与细胞实验数据仅用于说明计算方法与证据结构，仅供技术分析，不构成医疗建议
+- 持续更新的进展追踪：本仓是十件定稿笔记，更新不定期，不跟踪新论文与新平台
+
+**三条最反直觉的发现 ——**
+1. 能找回 95.3% 已知药物-靶点对，不等于能预测新配对——同一批顶级计算预测拿到体外去验，只有 10-30% 重复得出来，前者测记忆，后者测泛化（95.3% 回顾恢复 vs 10-30% 前瞻重复 [二手]）
+2. 让重定位便宜的不是「算得准」，是「算得便宜」：计算摊到每个药病对是分币级，验证每个适应症 $1M-$5M，中间 20-100 倍——省下的成本若不用来聚焦，会以候选数量的形式花掉（$50K-$500K/年 vs $1M-$5M/适应症 [二手]）
+3. 基准第一不是卖点，冷启动才是：多数模型是「暖启动冠军」，而重定位的典型场景恰恰没有历史结合数据（14,981 药 × 20,385 人源靶点；RMSE 0.447-0.699；冷启动条件下增益最大 [二手]）
+
+---
+
+<details>
+<summary><b>English Summary</b>（英文读者展开）</summary>
 
 These notes examine one question: can computational methods reliably assign new indications to molecules that have already paid for their safety, pharmacokinetics, and manufacturing. The ten pieces move through cost accounting by remaining uncertainty, a four-layer evidence chain linking molecule, selectivity, phenotype, and clinic, transcriptome fingerprint matching, diffusion models for drug-target interaction under cold start, entropy-based selectivity scoring, phenotype validation at cell-line scale, signals from million-person electronic health records, the unit economics of screening versus validation, and a closing falsification boundary. Each claim carries a boundary number together with its definition, a source grade, and the observation that would overturn it. They are written for engineers and researchers evaluating this field, and for anyone who needs to keep retrospective benchmark scores separate from prospective replication rates.
 
 > 中文简介见下 ↓
+
+</details>
 
 # AI 老药新用与计算重定位 · 十件研究笔记
 
@@ -89,3 +111,16 @@ MIT License。作者署名：chenhz01。
 3. 若 composition-of-matter 专利封锁、适应症红海或新人群毒性档案让省下的成本归零，则「成本优势 → 商业成功」的推论不成立。
 
 这套笔记的每篇都有完整两层费曼拆解，方法见 [FEYNMAN.md](./FEYNMAN.md)。
+
+## 可引用卡片：想转给同事，直接复制这几句
+
+> 95.3% 是回顾恢复率，10-30% 才是前瞻重复率，两者之间隔着一整个行业。
+> —— 出自《证伪边界：只有 10-30% 的计算预测能在体外重复》，[查看原文](./notes/09-falsification-10-30-percent.md)
+
+> 平台年费 $50K-$500K，一个适应症验证 $1M-$5M，贵的是验证不是想到。
+> —— 出自《成本经济学：$50K-$500K/年平台费 vs $1M-$5M/适应症》，[查看原文](./notes/08-cost-economics.md)
+
+> 1150 万人病历里 HR 0.82 与 0.92 的差别，是发生率信号，不是疗效结论。（技术分析，非医疗建议）
+> —— 出自《临床信号：1150 万人 EHR 中的 β 受体阻滞剂信号》，[查看原文](./notes/07-clinical-signal-11m-ehr.md)
+
+每句都自带出处链接，可单独复制转发。
