@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/social-preview.png" width="100%" alt="AI 老药新用与计算重定位十讲" /></p>
+
 ## 15 秒判断：这套笔记值不值得你收藏
 
 **收藏它，如果你是 ——**
